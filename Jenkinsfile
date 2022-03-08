@@ -32,6 +32,7 @@ if [ -f "/var/jenkins_home/Fota_CrontabLog.log" ] ; then
 fi
 
 '''
+        mail(subject: 'BlueOceanDailybuildS1022V01', body: 'as title', to: 'fred_tseng@askey.com')
       }
     }
 
