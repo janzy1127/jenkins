@@ -21,11 +21,11 @@ if [ -f "/var/jenkins_home/LTE_CrontabLog.log" ] ; then
 fi
 
 
-if [ -f "/var/jenkins_home/Fota_CrontabLog.log" ] ; then
-    rm /var/jenkins_home/Fota_CrontabLog.log
-fi
+#if [ -f "/var/jenkins_home/Fota_CrontabLog.log" ] ; then
+#    rm /var/jenkins_home/Fota_CrontabLog.log
+#fi
 
-sshpass -p "123456" ssh dailybuild@$BS "sshpass -p 123456 ssh $LTES \\"bash /home/dailybuild/disk2/DailyBuild/all_fota_pack.sh f=LTE_build_list.tmp n=1\\""  > /var/jenkins_home/Fota_CrontabLog.log
+#sshpass -p "123456" ssh dailybuild@$BS "sshpass -p 123456 ssh $LTES \\"bash /home/dailybuild/disk2/DailyBuild/all_fota_pack.sh f=LTE_build_list.tmp n=1\\""  > /var/jenkins_home/Fota_CrontabLog.log
 
 if [ -f "/var/jenkins_home/Fota_CrontabLog.log" ] ; then
     date >> /var/jenkins_home/Fota_CrontabLog.log
